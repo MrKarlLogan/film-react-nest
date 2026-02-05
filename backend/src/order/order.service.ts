@@ -15,7 +15,8 @@ export class OrderService {
         (schedule) => schedule.id === order.session,
       );
       const seatKey = `${order.row}:${order.seat}`;
-      if (schedule.taken.indexOf(seatKey) >= 0) throw new Error('Место занято');
+      if (schedule.taken.indexOf(seatKey) >= 0)
+        throw new Error('Ошибка передачи данных');
       schedule.taken.push(seatKey);
     });
     await this.filmService.save(<PostFilmDTO>film);
