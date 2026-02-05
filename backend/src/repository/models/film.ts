@@ -4,37 +4,37 @@ import { ScheduleSchema } from './schedule';
 export const FilmSchema = new mongoose.Schema({
   rating: {
     type: Number,
-    require: true,
+    required: true,
   },
   director: {
     type: String,
-    require: true,
+    required: true,
   },
   tags: [
     {
       type: String,
-      require: true,
+      required: true,
     },
   ],
   image: {
     type: String,
-    require: true,
+    required: true,
   },
   cover: {
     type: String,
-    require: true,
+    required: true,
   },
   title: {
     type: String,
-    require: true,
+    required: true,
   },
   about: {
     type: String,
-    require: true,
+    required: true,
   },
-  desription: {
+  description: {
     type: String,
-    require: true,
+    required: true,
   },
   schedule: [ScheduleSchema],
 });
